@@ -18,6 +18,8 @@ gem 'bootstrap-sass', '~> 3.3'
 gem 'ckeditor', '~> 4.1'
 gem 'devise'
 gem 'sass-rails', '~> 5.0'
+gem 'carrierwave'
+gem 'mini_magick'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
