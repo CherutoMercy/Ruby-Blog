@@ -24,6 +24,7 @@ Rails.application.configure do
     config.action_controller.perform_caching = false
 
     config.cache_store = :null_store
+    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   end
 
   # Don't care if the mailer can't send.

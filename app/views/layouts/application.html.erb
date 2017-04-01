@@ -1,48 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ScotchBlog</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-<nav class="navbar navbar-inverse">
+<head>
+  <title>ScotchBlog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <!-- Render navigation bar -->
+  <%= render "layouts/navigation" %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">My Blog</a>
-    </div>
-    <ul class="nav navbar-nav">
-          <li><%= link_to "Browse Posts", posts_path %></li>
-          <li><%= link_to "Price List" %></li>
-          <li><%= link_to "Contact Us" %></li>
-          <li><%= link_to "Cart" %></li>
-          <li><%= link_to 'New Post', new_post_path %></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
+    <%= yield %>
   </div>
-</nav>
-<div class="row">
-<img src="/images/blog.jpg" class="img-circle" alt="Cinque Terre" width="100%" height="236">
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <h2 class ="align-center">About Us</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </div>
-   <div class="row">
-<h1 class ="align-center">Posts</h1>
-      <div class="col-sm-12"><%= yield %>
-    </div>
-  </div>
-</div>
 
-  </body>
+</body>
 </html>
