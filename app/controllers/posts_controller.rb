@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+   #This authenticates admin whenever a post is to be created, updated or destroyed.
+  before_action :authenticate_admin!, except: [:index, :show]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
